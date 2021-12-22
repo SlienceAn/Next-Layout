@@ -2,7 +2,7 @@ $theme-color:rgb(5, 66, 128);
 $timeline-axis:rgb(43, 143, 243);
 
 * {
-    font-size: "微軟正黑體";
+    font-size: "Segoe UI", "微軟正黑體", sans-serif;
 }
 
 .box {
@@ -279,12 +279,19 @@ $timeline-axis:rgb(43, 143, 243);
     color: #fff;
     background: $timeline-axis;
 
+    & ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
     & li {
         padding: 1.5rem 3rem;
         box-sizing: border-box;
         border-left: .5px solid #aaa;
         border-right: .5px solid #aaa;
         border-collapse: collapse;
+        list-style: none;
 
         &:hover {
             background: $theme-color;
@@ -354,7 +361,7 @@ $timeline-axis:rgb(43, 143, 243);
 
             & label {
                 position: absolute;
-                bottom: 0;
+                bottom: 10%;
                 left: 10%;
                 color: #fff;
                 font-size: 25px;

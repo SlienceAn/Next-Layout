@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import ArrowNavbar from '../component/ArrowNavbar'
+import Navbar from '../component/Navbar'
 import BackgroundCilp from '../component/BackgroundCilp'
 import ProfileCard from '../component/ProfileCard'
 import Timeline from '../component/Timeline'
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
     <div className="box">
       <div>
         <BackgroundCilp />
+        <Navbar />
         <ArrowNavbar />
         <ProfileCard />
         <Timeline />
