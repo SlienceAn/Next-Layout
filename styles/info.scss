@@ -179,6 +179,13 @@ $timeline-axis:rgb(43, 143, 243);
             gap: .5rem;
             top: -40px;
 
+            &-img {
+                &>span {
+                    border-radius: 100%;
+                    outline: 10px solid $theme-color;
+                }
+            }
+
         }
 
         &-footer {
@@ -381,10 +388,12 @@ $timeline-axis:rgb(43, 143, 243);
     }
 }
 
+.Cube {}
+
 .footer {
     background: $theme-color;
     width: 100%;
-    max-height: 20vh;
+    min-height: 20vh;
     display: flex;
 }
 

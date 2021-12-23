@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { DiJsBadge, DiReact, DiNodejsSmall, DiSass } from 'react-icons/di'
+import profileImg from '../public/user-logo.png'
+
 const ProfileCard = () => {
     return (
         <div className="Profile">
@@ -11,13 +13,16 @@ const ProfileCard = () => {
                         <div className="card-header-content" />
                     </div>
                     <div className="card-body">
-                        <Image
-                            width={500}
-                            height={500}
-                            src="/assets/user-logo.png"
-                            alt="missing"
-                        />
-                        <h2>Card-Title</h2>
+                        <div className="card-body-img">
+                            <Image
+                                src={profileImg}
+                                width={60}
+                                height={60}
+                                alt="missing"
+                                priority
+                            />
+                        </div>
+                        <h2 style={{ margin: 0 }}>Card-Title</h2>
                         <p>Card content</p>
                     </div>
                     <div className="card-footer">
