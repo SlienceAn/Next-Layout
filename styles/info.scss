@@ -5,13 +5,14 @@ $box-background:rgba(229, 231, 235, 1);
 * {
     font-size: "Segoe UI", "微軟正黑體", sans-serif;
 }
-
+//容器
 .box {
     background: $box-background;
     min-height: 100vh;
     height: 100%;
     position: relative;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 
     &>div {
@@ -19,7 +20,7 @@ $box-background:rgba(229, 231, 235, 1);
     }
 
 }
-
+//背景斜切
 .Cilp {
     width: 100%;
     height: 40vh;
@@ -52,7 +53,7 @@ $box-background:rgba(229, 231, 235, 1);
         font-weight: 600;
     }
 }
-
+//箭頭導覽
 .Arrow {
     &-box {
         display: flex;
@@ -115,7 +116,7 @@ $box-background:rgba(229, 231, 235, 1);
         }
     }
 }
-
+//介紹卡片
 .Profile {
     width: 100%;
     display: flex;
@@ -204,7 +205,7 @@ $box-background:rgba(229, 231, 235, 1);
         }
     }
 }
-
+//時間軸
 .timeline {
     width: 85%;
     min-height: 80vh;
@@ -278,7 +279,7 @@ $box-background:rgba(229, 231, 235, 1);
 
     }
 }
-
+//導覽列
 .Navbar {
     display: flex;
     justify-content: space-around;
@@ -307,7 +308,7 @@ $box-background:rgba(229, 231, 235, 1);
         }
     }
 }
-
+//圓餅圖
 .pie {
     width: 100%;
     position: relative;
@@ -387,16 +388,16 @@ $box-background:rgba(229, 231, 235, 1);
 
     }
 }
-
+//旋轉方塊
 .Cube {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    perspective: 76em;
+    perspective: 800px;
     position: relative;
-    outline: solid;
-    gap: .5rem;
+    gap: 2rem;
+    padding: 2rem 0;
 
     input {
         display: none;
@@ -409,16 +410,20 @@ $box-background:rgba(229, 231, 235, 1);
         color: #fff;
 
         label {
-            padding: .5rem;
-            margin: 0;
-            background: $theme-color;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $timeline-axis;
             width: 100px;
             height: calc(100% / 3);
+            font-size: 25px;
+            font-family: 900;
+            border-radius: 10px;
 
-            &:nth-child(1) {}
-
-            &:hover {}
+            &:hover {
+                cursor: pointer;
+                background: $theme-color;
+            }
         }
     }
 
@@ -427,40 +432,69 @@ $box-background:rgba(229, 231, 235, 1);
         width: 300px;
         height: 300px;
         transform-style: preserve-3d;
+        transition: transform 0.5s ease-in;
     }
 
     &-content {
-        background: #7bf;
-        text-align: center;
         width: 100%;
         height: 100%;
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
 
-        h1 {
-            font-size: 25px;
-            font-weight: 300;
-            margin: 0;
+        span {
+            width: 50%;
+            margin: auto;
+            color: #fff;
+            font-size: 35px;
+            font-family: 900;
+            background: rgba(43, 42, 42, 0.616);
+            outline: 5px solid;
+            padding: .5rem;
         }
 
-        p {
-            font-size: 12px;
-            margin: 0;
+        &:nth-child(1) {
+            transform: rotateX(-270deg) translateY(-150px);
+            transform-origin: top;
+            background-image: url('https://picsum.photos/200/300?random=1');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &:nth-child(2) {
+            transform: translateZ(150px);
+            background-image: url('https://picsum.photos/200/300?random=2');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &:nth-child(3) {
+            transform: rotateX(-90deg) translateY(150px);
+            transform-origin: bottom;
+            background-image: url('https://picsum.photos/200/300?random=3');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
     }
 
-    #tab-top:checked{
-        color: #000;
+    #tab-top:checked~.Cube-box {
+        transform: rotateX(-90deg);
     }
-    
-    #tab-front:checked~.Cube {
+
+    #tab-front:checked~.Cube-box {
         transform: rotateX(0deg);
     }
 
-    #tab-bottom:checked~.Cube {
+    #tab-bottom:checked~.Cube-box {
         transform: rotateX(90deg);
     }
 }
-
+//頁尾
 .footer {
     background: $theme-color;
     width: 100%;
