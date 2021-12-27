@@ -1,0 +1,82 @@
+@import 'index';
+
+//圓餅圖
+.pie {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &-content {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        background: #639;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: relative;
+            background: #639;
+
+        }
+
+        &:hover::after {
+            cursor: pointer;
+        }
+
+        &::after {
+            content: attr(data-info);
+            width: 40%;
+            height: 40%;
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            border-radius: 100%;
+            background: $box-background;
+            backdrop-filter: blur(15.7px);
+        }
+    }
+
+    $colors: (#2C398F,
+        #8293FF,
+        #5A6CDB,
+        #8F7624,
+        #DBBD5A,
+        #DBD57E);
+    $rotate-value:60;
+
+    @for $i from 1 through 6 {
+        &-part:nth-child(#{$i}) {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            transform: translate(0, -50%) rotate(#{$i*$rotate-value}deg);
+            transform-origin: 50% 100%;
+
+            & label {
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+                color: #fff;
+                font-size: 25px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: nth($colors, $i);
+                transform-origin: 50% 0;
+                transform: translate(0, 100%) rotate(#{$rotate-value}deg);
+            }
+        }
+
+    }
+}   

@@ -6,6 +6,7 @@ import ProfileCard from '../component/ProfileCard'
 import Timeline from '../component/Timeline'
 import PieChart from '../component/PieChart'
 import PerspectiveCube from '../component/PerspectiveCube'
+import RotateCube from '../component/RotateCube'
 import Footer from '../component/Footer'
 
 const Home: NextPage = () => {
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <Timeline />
         <PieChart />
         <PerspectiveCube />
+        <RotateCube />
       </div>
       <Footer />
     </div>

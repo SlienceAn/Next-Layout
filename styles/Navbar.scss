@@ -1,0 +1,31 @@
+@import 'index';
+
+//導覽列
+.Navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    background: $timeline-axis;
+
+    & ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    & li {
+        padding: 1.5rem 3rem;
+        box-sizing: border-box;
+        border-left: .5px solid #aaa;
+        border-right: .5px solid #aaa;
+        border-collapse: collapse;
+        list-style: none;
+
+        &:hover {
+            background: $theme-color;
+            cursor: pointer;
+        }
+    }
+}

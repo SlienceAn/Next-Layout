@@ -1,0 +1,35 @@
+@import 'index';
+
+//背景斜切
+.Cilp {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(115deg, $theme-color 50%, transparent 50%) center center / 100% 100%,
+        url("http://localhost:8082/src/assets/free.jpg") right center / auto 100%;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        padding: 2.5rem;
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        color: #fff;
+        padding-bottom: 1rem;
+        border-bottom: .5px solid #fafa;
+        width: fit-content;
+    }
+
+    &-text {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: #fff;
+        font-weight: 600;
+    }
+}
