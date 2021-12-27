@@ -8,6 +8,7 @@ import '../styles/Timeline.scss'
 import '../styles/ProfileCard.scss'
 import '../styles/PieChart.scss'
 import '../styles/RotateCube.scss'
+import '../styles/TextLayout.scss'
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
