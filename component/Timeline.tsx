@@ -1,5 +1,4 @@
 import React from 'react';
-import TextLayout from './TextLayout';
 const Timeline = () => {
     return (
         <div className="timeline">
@@ -7,7 +6,7 @@ const Timeline = () => {
                 <div className="timeline-container">
                     <h2 className="timeline-time">2021-12-0{idx + 1}</h2>
                     <div className="timeline-content">
-                        <TextLayout />
+                        {/* <TextLayout /> */}
                     </div>
                 </div>
             )}
