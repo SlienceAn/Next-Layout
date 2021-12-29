@@ -1,0 +1,16 @@
+@import 'index';
+
+.text {
+    &-box {
+        background-color: rgba(19, 18, 18, 0.24);
+        color: #fff;
+        border: 10px solid;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+    }
+
+    &-content {
+        font-size: 40px;
+        font-weight: bolder; 
+    }
+}

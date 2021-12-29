@@ -4,20 +4,18 @@
 .Arrow {
     &-box {
         display: flex;
-        margin-bottom: 1rem;
         position: relative;
-        padding: 1.5rem;
         justify-content: center;
     }
 
     &-content {
         opacity: 0;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         height: 50px;
-        width: 10%;
-        margin: 5px 25px 0 0;
+        width: 100px;
+        margin: 0 25px 0 0;
         position: relative;
         background: $theme-color;
         color: #FFF;
@@ -32,6 +30,10 @@
             &::after {
                 border-color: transparent transparent transparent #7bf;
             }
+        }
+
+        &:first-child {
+            justify-content: center;
         }
 
         &:first-child::before {

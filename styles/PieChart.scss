@@ -11,8 +11,8 @@
     padding-bottom: 1rem;
 
     &-content {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         border-radius: 100%;
         background: #639;
         position: relative;
@@ -37,7 +37,7 @@
             left: 30%;
             top: 30%;
             border-radius: 100%;
-            background: $box-background;
+            background: $theme-color;
             backdrop-filter: blur(15.7px);
         }
     }

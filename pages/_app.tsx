@@ -9,6 +9,10 @@ import '../styles/ProfileCard.scss'
 import '../styles/PieChart.scss'
 import '../styles/RotateCube.scss'
 import '../styles/TextLayout.scss'
+import '../styles/ScrollParallax.scss'
+import '../styles/TextEffect.scss'
+import '../styles/Footer.scss'
+
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }

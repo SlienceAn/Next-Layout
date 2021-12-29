@@ -3,10 +3,10 @@ $timeline-axis:rgb(43, 143, 243);
 $box-background:rgba(229, 231, 235, 1);
 
 
-* {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'sans-serif';
+// * {
+//     font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'sans-serif';
 
-}
+// }
 
 //容器
 .box {
@@ -22,14 +22,6 @@ $box-background:rgba(229, 231, 235, 1);
         flex: 1
     }
 
-}
-
-//頁尾
-.footer {
-    background: $theme-color;
-    width: 100%;
-    min-height: 20vh;
-    display: flex;
 }
 
 @for $i from 1 through 6 {
