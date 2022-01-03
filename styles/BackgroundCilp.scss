@@ -6,7 +6,7 @@
     height: 50vh;
     position: relative;
     background: linear-gradient(115deg, $theme-color 50%, transparent 50%) center center / 100% 100%,
-        url("http://localhost:8082/src/assets/free.jpg") right center / auto 100%;
+        url("/free.jpg") right center / auto 100%;
 
     &-content {
         display: flex;
@@ -17,7 +17,7 @@
     }
 
     &-title {
-  
+   
     }
 
     &-text {

@@ -11,6 +11,7 @@ import '../styles/RotateCube.scss'
 import '../styles/TextLayout.scss'
 import '../styles/ScrollParallax.scss'
 import '../styles/TextEffect.scss'
+import '../styles/FixedTable.scss'
 import '../styles/Footer.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {

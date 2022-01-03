@@ -9,7 +9,7 @@
 
     .card {
         &-box {
-            width: 20%; //初始值250px
+            width: 250px; //初始值250px
             background: #fff;
             position: relative;
             border-radius: .5rem;
@@ -71,7 +71,6 @@
                     outline: 10px solid $theme-color;
                 }
             }
-
         }
 
         &-footer {

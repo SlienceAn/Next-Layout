@@ -5,17 +5,19 @@ import ScrollParallax from '../component/ScrollParallax'
 import Timeline from '../component/Timeline'
 import Footer from '../component/Footer'
 import TextLayout from '../component/TextLayout'
+import FixedTable from '../component/FixedTable'
 const Home: NextPage = () => {
   return (
     <div className="box">
       <div>
-        <BackgroundCilp />
+        <FixedTable />
+        {/* <BackgroundCilp />
         <ScrollParallax />
         <div style={{ display: 'flex', justifyContent: 'center', padding: '.5rem' }}>
           <TextLayout />
         </div>
         <ProfileCard />
-        <Timeline />
+        <Timeline /> */}
       </div>
       <Footer />
     </div>
