@@ -13,6 +13,7 @@ import '../styles/ScrollParallax.scss'
 import '../styles/TextEffect.scss'
 import '../styles/FixedTable.scss'
 import '../styles/Footer.scss'
+import '../styles/Article.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

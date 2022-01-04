@@ -7,6 +7,7 @@ import Footer from '../component/Footer'
 import TextLayout from '../component/TextLayout'
 import FixedTable from '../component/FixedTable'
 import ArrowNavbar from '../component/ArrowNavbar'
+import Article from '../component/Article'
 
 const Layout = {
   display: 'flex',
@@ -18,7 +19,8 @@ const Layout = {
 const Home: NextPage = () => {
   return (
     <div className="box">
-      <div>
+      <Article />
+      {/* <div>
         <BackgroundCilp />
         <ScrollParallax />
         <div style={Layout}>
@@ -33,8 +35,8 @@ const Home: NextPage = () => {
           <TextLayout text="Arrow Navbar" />
           <ArrowNavbar />
         </div>
-        {/* <Timeline /> */}
-      </div>
+        <Timeline />
+      </div> */}
       <Footer />
     </div>
   )
