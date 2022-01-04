@@ -1,50 +1,96 @@
-@import 'index';
+@use 'index';
 
 //Table-layout:
 //table-layout 屬性有兩種設定值：
 //auto（預設值）- 表格的總寬度決定於每一個儲存格(Cell)的最大值
 //fixed – 表格的總寬度決定於表格 width 的定義，以及各欄位(Column) width 的定義
 
-//Position-sticky
+//Position-sticky:
 //sticky 的表現類似於 relative 和 fixed 的合體，在目標區域中可見時，它的行為就像 relative 不會有任何變化，而當頁面滾動超出目標區域時，它的表現 改為 fixed，會固定於目標位置。
 //要注意的是當 position : sticky 應用於 table，只能作用於 <th> 和 <td>，並且一定要定義目標位置 left / right / top / bottom 才會出現固定效果！
 
+
+//無法隱藏滑入多餘區塊-bug
 .fixed-table {
-    width: 30%;
+    width: 70%;
     overflow: auto;
-    outline: solid;
-    height: 200px;
+    height: 500px;
+    margin: auto;
+    outline:.5px solid rgba(170, 170, 170, 0.589);
 
     table {
         border-collapse: collapse;
+        border-spacing: 0;
         table-layout: fixed;
-        width: 100px;
+        width: 100%;
+        z-index: 5;
+        overflow: scroll;
 
         td,
         th {
-            border: 1px solid gray;
+            border: .5px solid rgb(196, 196, 196);
             width: 100px;
             height: 30px;
+            position: relative;
+            background: transparent;
         }
 
         th {
-            background: $theme-color;
+            background: index.$theme-color;
             color: #fff;
             position: sticky;
-            top: 0
+            top: 0;
+            z-index: 3;
+        }
+
+        td {
+            text-align: center;
+            background: rgba(128, 255, 0, 0);
+
+            //橫向
+            &:hover::before {
+                content: '\00a0';
+                position: absolute;
+                top: 0;
+                left: -5000px;
+                width: 10000px;
+                height: 100%;
+                background: rgba(255, 255, 170, 0.5);
+                cursor: pointer;
+                z-index: 1;
+                outline: .5px solid index.$theme-color;
+            }
+
+            //縱向
+            &:hover::after {
+                content: "";
+                position: absolute;
+                top: -5000px;
+                left: 0;
+                width: 100%;
+                height: 10000px;
+                background: rgba(255, 255, 170, 0.5);
+                cursor: pointer;
+                z-index: 2;
+                outline: .5px solid index.$theme-color;
+            }
         }
 
         th:first-child,
         td:first-child {
             position: sticky;
             left: 0;
-            z-index: 1;
-            background: #aaa;
+            z-index: 3;
+            background: rgb(243, 243, 243);
+        }
+
+        tr:nth-child(even) {
+            background: rgb(234, 240, 234);
         }
 
         th:first-child {
-            z-index: 2;
-            background: $theme-color;
+            z-index: 4;
+            background: index.$theme-color;
         }
     }
 }

@@ -6,18 +6,34 @@ import Timeline from '../component/Timeline'
 import Footer from '../component/Footer'
 import TextLayout from '../component/TextLayout'
 import FixedTable from '../component/FixedTable'
+import ArrowNavbar from '../component/ArrowNavbar'
+
+const Layout = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: '.5rem'
+} as React.CSSProperties
+
 const Home: NextPage = () => {
   return (
     <div className="box">
       <div>
-        <FixedTable />
-        {/* <BackgroundCilp />
+        <BackgroundCilp />
         <ScrollParallax />
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '.5rem' }}>
-          <TextLayout />
+        <div style={Layout}>
+          <TextLayout text="Profile Card" />
+          <ProfileCard />
         </div>
-        <ProfileCard />
-        <Timeline /> */}
+        <div style={Layout}>
+          <TextLayout text="Table Row and Col Fixed" />
+          <FixedTable />
+        </div>
+        <div style={Layout}>
+          <TextLayout text="Arrow Navbar" />
+          <ArrowNavbar />
+        </div>
+        {/* <Timeline /> */}
       </div>
       <Footer />
     </div>

@@ -6,13 +6,15 @@ const FixedTable = () => {
             <table>
                 <thead>
                     <tr>
-                        {new Array(10).fill(1).map(el => <th>{el}</th>)}
+                        <th>#</th>
+                        {new Array(30).fill(1).map((el, idx) => <th>{idx + 1}</th>)}
                     </tr>
                 </thead>
                 <tbody>
-                    {new Array(50).fill(1).map(el =>
+                    {new Array(50).fill(1).map((el, idx) =>
                         <tr>
-                            {new Array(10).fill(1).map(el => <td>{el}</td>)}
+                            <td>{idx + 1}</td>
+                            {new Array(30).fill(1).map(el => <td>{el}</td>)}
                         </tr>)}
                 </tbody>
             </table>
