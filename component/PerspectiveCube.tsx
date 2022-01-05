@@ -23,7 +23,10 @@ const PerspectiveCube = () => {
         }).then((res: any) => {
             tabThird.current.click()
             setToggle(!isToggle)
-        });
+        }).catch(err => {
+           console.log(err)
+        })
+        return () => setToggle(true)
     }, [isToggle])
     return (
         <div className="Cube">
