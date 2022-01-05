@@ -1,6 +1,7 @@
 .article {
     width: 100%;
-    outline: solid;
+    display: flex;
+    gap: 1rem;
 
     img {
         float: left;
@@ -14,6 +15,13 @@
     p {
         word-wrap: break-word;
         text-align: justify; //英文兩端對齊
+        text-indent: 10px;
+
+        &::first-letter {
+            font-size: 25px;
+            font-weight: bolder;
+            margin-right: 3px;
+        }
     }
 
     &-left {
@@ -27,6 +35,6 @@
     }
 
     &-clear {
-        clear: right;
+        clear: both;
     }
 }

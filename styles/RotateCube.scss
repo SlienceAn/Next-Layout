@@ -44,9 +44,10 @@
                 top: 0;
                 left: 0;
                 transform: rotate(45deg);
-                background-image: url('http://placekitten.com/g/200/300');
-                background-repeat: no-repeat;
-                background-size: cover;
+                background: linear-gradient(90deg, rgba(84, 154, 249, 1)50%, rgba(0, 145, 190, 0.7)60%);
+                // background-image: url('http://placekitten.com/g/200/300');
+                // background-repeat: no-repeat;
+                // background-size: cover;
                 outline: .5px solid #aaa;
                 box-shadow: 0 0 5px #666;
             }

@@ -7,20 +7,18 @@ import Footer from '../component/Footer'
 import TextLayout from '../component/TextLayout'
 import FixedTable from '../component/FixedTable'
 import ArrowNavbar from '../component/ArrowNavbar'
-import Article from '../component/Article'
 
 const Layout = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  padding: '.5rem'
+  padding: '1rem 0rem'
 } as React.CSSProperties
 
 const Home: NextPage = () => {
   return (
     <div className="box">
-      <Article />
-      {/* <div>
+      <div>
         <BackgroundCilp />
         <ScrollParallax />
         <div style={Layout}>
@@ -31,12 +29,11 @@ const Home: NextPage = () => {
           <TextLayout text="Table Row and Col Fixed" />
           <FixedTable />
         </div>
-        <div style={Layout}>
-          <TextLayout text="Arrow Navbar" />
+        <div style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>
           <ArrowNavbar />
         </div>
         <Timeline />
-      </div> */}
+      </div>
       <Footer />
     </div>
   )
