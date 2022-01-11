@@ -1,4 +1,6 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
 import BackgroundCilp from '../component/BackgroundCilp'
 import ProfileCard from '../component/ProfileCard'
 import ScrollParallax from '../component/ScrollParallax'
@@ -17,24 +19,27 @@ const Layout = {
 
 const Home: NextPage = () => {
   return (
-    <div className="box">
-      <div>
-        <BackgroundCilp />
-        <ScrollParallax />
-        <div style={Layout}>
-          <TextLayout text="Profile Card" />
-          <ProfileCard />
-        </div>
-        <div style={Layout}>
-          <TextLayout text="Table Row and Col Fixed" />
-          <FixedTable />
-        </div>
-        <div style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>
-          <ArrowNavbar />
-        </div>
-        <Timeline />
-      </div>
-      <Footer />
+    <div style={{ width: '100%', textAlign: 'center' }}>
+      <Head>
+        <title>Next.js+SASS</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="title" />
+      </Head>
+      <ul>
+        {new Array(5).fill("Link").map((el, idx) =>
+          <Link
+            href={{
+              pathname: "/Profile",
+              query: {
+                id: idx + 1,
+              }
+            }}
+          >
+            <li>
+              <a>Profile-{el}-{idx + 1}</a>
+            </li>
+          </Link>
+        )}
+      </ul>
     </div>
   )
 }

@@ -5,11 +5,11 @@ import Link from 'next/link';
 const content = [
     {
         parent: 'Home',
-        children: ['React', 'Vue', 'Redux', 'Typescrupt', 'Nodejs']
+        children: []
     },
     {
         parent: 'Profile',
-        children: ['React', 'Vue', 'Redux', 'Typescrupt', 'Nodejs']
+        children: ['demo-1', 'demo-2', 'demo-3']
     }
 ]
 
@@ -29,7 +29,8 @@ const Navbar = () => {
                                     <li>{el}</li>
                                 </Link>)}
                         </ul>
-                    </li>)}
+                    </li>)
+                }
             </ul>
         </nav>
     )
