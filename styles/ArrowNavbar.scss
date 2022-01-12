@@ -1,4 +1,5 @@
 @import 'index';
+@import 'size';
 
 //箭頭導覽
 .Arrow {
@@ -13,13 +14,31 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: 150px;
-        width: 150px;
-        margin: 0 75px 0 0;
         position: relative;
         background: $theme-color;
         color: #FFF;
-        font-size: 15px;
+
+
+        @include pc {
+            height: 100px;
+            width: 100px;
+            margin: 0 50px 0 0;
+            font-size: 4rem;
+        }
+
+        @include pad {
+            width: 70px;
+            height: 70px;
+            margin: 0 35px 0 0;
+            font-size: 2rem;
+        }
+
+        @include phone {
+            width: 50px;
+            height: 50px;
+            margin: 0 25px 0 0;
+            font-size: 1rem;
+        }
 
         &:hover {
             background: #7bf;
@@ -47,9 +66,17 @@
             position: absolute;
             left: 0px;
             border-style: solid;
-            border-width: 75px 0 75px 75px;
+            border-width: 50px 0 50px 50px;
             border-color: transparent transparent transparent rgb(255, 255, 255);
             z-index: 0;
+
+            @include pad {
+                border-width: 35px 0 35px 35px;
+            }
+
+            @include phone {
+                border-width: 25px 0 25px 25px;
+            }
         }
 
         &::after {
@@ -57,11 +84,21 @@
             height: 0;
             width: 0;
             position: absolute;
-            right: -75px;
+            right: -50px;
             border-style: solid;
-            border-width: 75px 0 75px 75px;
+            border-width: 50px 0 50px 50px;
             border-color: transparent transparent transparent $theme-color;
             z-index: 10;
+
+            @include pad {
+                border-width: 35px 0 35px 35px;
+                right: -35px;
+            }
+
+            @include phone {
+                border-width: 25px 0 25px 25px;
+                right: -25px;
+            }
         }
     }
 }

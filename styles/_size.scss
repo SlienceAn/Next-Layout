@@ -1,0 +1,30 @@
+$pc:960px;
+$pcs:959px;
+$pad:760px;
+$pads:759px;
+$phone:480px;
+$phones:479px;
+
+@mixin pc {
+    @media all and (min-width:$pc) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media all and (min-width:$pad) and (max-width:$pcs) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media all and (min-width:$phone) and (max-width:$pads) {
+        @content;
+    }
+}
+
+@mixin phone-small {
+    @media all and (max-width:$phones) {
+        @content;
+    }
+}

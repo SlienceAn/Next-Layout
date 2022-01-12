@@ -1,4 +1,5 @@
 @import 'index';
+@import 'size';
 
 //頁尾
 .footer {
@@ -8,30 +9,17 @@
     color: #fff;
     position: relative;
 
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     left: 20%;
-    //     width: 0;
-    //     height: 0;
-    //     border: 40px solid;
-    //     border-color: $box-background transparent transparent transparent;
-    // }
-
-    &::after {
-        content: "";
-        position: absolute;
-        width: 5px;
-        height: 40px;
-        left: 20%;
-        top: 0;
-        background: $theme-color;
-    }
-
     &-content {
         display: flex;
         height: 80%;
+
+        @include phone {
+            flex-direction: column;
+        }
+
+        @include pad {
+            flex-wrap: wrap;
+        }
 
         &-col {
 
@@ -39,12 +27,13 @@
             position: relative;
 
             &:nth-child(1) {
-                width: 35%;
-
+                @include pad {
+                    width: 25%;
+                }
                 & p::first-letter {
                     font-size: 25px;
                     margin-right: 2px;
-                    
+
                 }
             }
 

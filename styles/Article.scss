@@ -1,7 +1,13 @@
+@import 'size';
+
 .article {
     width: 100%;
     display: flex;
     gap: 1rem;
+
+    @include phone {
+        flex-direction: column;
+    }
 
     img {
         float: left;
@@ -27,11 +33,19 @@
     &-left {
         width: 50%;
         float: left;
+
+        @include phone {
+            width: 100%;
+        }
     }
 
     &-right {
         width: 50%;
         float: right;
+
+        @include phone {
+            width: 100%;
+        }
     }
 
     &-clear {

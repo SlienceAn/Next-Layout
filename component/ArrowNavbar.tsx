@@ -4,27 +4,27 @@ import { SiSass, SiReact, SiRedux, SiTsnode, SiTypescript, SiWebpack } from 'rea
 const data = [
     {
         name: 'sass',
-        icon: <SiSass fontSize="5rem" />
-    },
+        icon: <SiSass />
+    },  
     {
         name: 'React',
-        icon: <SiReact fontSize="5rem" />
+        icon: <SiReact />
     },
     {
         name: 'Redux',
-        icon: <SiRedux fontSize="5rem" />
+        icon: <SiRedux />
     },
     {
         name: 'Tsnode',
-        icon: <SiTsnode fontSize="5rem" />
+        icon: <SiTsnode />
     },
     {
         name: 'Typescript',
-        icon: <SiTypescript fontSize="5rem" />
+        icon: <SiTypescript />
     },
     {
         name: 'webpack',
-        icon: <SiWebpack fontSize="5rem" />
+        icon: <SiWebpack />
     }
 ]
 

@@ -10,37 +10,56 @@ import TextLayout from '../component/TextLayout'
 import FixedTable from '../component/FixedTable'
 import ArrowNavbar from '../component/ArrowNavbar'
 
-const Layout = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  padding: '1rem 0rem'
-} as React.CSSProperties
-
 const Home: NextPage = () => {
   return (
-    <div style={{ width: '100%', textAlign: 'center' }}>
-      <Head>
-        <title>Next.js+SASS</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="title" />
-      </Head>
-      <ul>
-        {new Array(5).fill("Link").map((el, idx) =>
-          <Link
-            href={{
-              pathname: "/Profile",
-              query: {
-                id: idx + 1,
-              }
-            }}
-          >
-            <li>
-              <a>Profile-{el}-{idx + 1}</a>
-            </li>
-          </Link>
-        )}
-      </ul>
+    <div className="box">
+      <div>
+        <Head>
+          <title>Next.js+SASS</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" key="title" />
+        </Head>
+        <BackgroundCilp />
+        <ScrollParallax />
+        <div className="box-secondry">
+          <TextLayout text="Profile Card" />
+          <ProfileCard />
+        </div>
+        <div className="box-secondry">
+          <TextLayout text="Arrow Navbar" />
+          <ArrowNavbar />
+        </div>
+        <div className="box-secondry">
+          <TextLayout text="Fixed Table" />
+          <FixedTable />
+        </div>
+        <div className="box-secondry">
+          <TextLayout text="Timeline" />
+          <Timeline />
+        </div>
+      </div>
+      <Footer />
     </div>
+  )
+}
+
+const LinkTest = () => {
+  return (
+    <ul>
+      {new Array(5).fill("Link").map((el, idx) =>
+        <Link
+          href={{
+            pathname: "/Profile",
+            query: {
+              id: idx + 1,
+            }
+          }}
+        >
+          <li>
+            <a>Profile-{el}-{idx + 1}</a>
+          </li>
+        </Link>
+      )}
+    </ul>
   )
 }
 

@@ -1,4 +1,5 @@
 @import 'index';
+@import 'size';
 
 //文字排版
 .Text-box {
@@ -17,6 +18,14 @@
         display: flex;
         align-self: flex-start;
         filter: drop-shadow(4px 8px 7px rgba(rgb(70, 69, 69), 0.3));
+
+        @include pad {
+            font-size: 40px;
+        }
+
+        @include phone {
+            font-size: 30px;
+        }
 
         &::before {
             @extend .square;
@@ -42,4 +51,14 @@
     left: -20px;
     width: 80px;
     height: 80px;
+
+    @include pad {
+        width: 60px;
+        height: 60px;
+    }
+
+    @include phone {
+        width: 40px;
+        height: 40px;
+    }
 }
