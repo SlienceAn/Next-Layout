@@ -47,6 +47,7 @@ const LinkTest = () => {
     <ul>
       {new Array(5).fill("Link").map((el, idx) =>
         <Link
+          passHref
           href={{
             pathname: "/Profile",
             query: {

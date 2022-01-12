@@ -7,14 +7,14 @@ const FixedTable = () => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        {new Array(30).fill(1).map((el, idx) => <th>{idx + 1}</th>)}
+                        {new Array(30).fill(1).map((el, idx) => <th key={idx}>{idx + 1}</th>)}
                     </tr>
                 </thead>
                 <tbody>
                     {new Array(50).fill(1).map((el, idx) =>
-                        <tr>
+                        <tr key={el}>
                             <td>{idx + 1}</td>
-                            {new Array(30).fill(1).map(el => <td>{el}</td>)}
+                            {new Array(30).fill(1).map(el => <td key={el}>{el}</td>)}
                         </tr>)}
                 </tbody>
             </table>
