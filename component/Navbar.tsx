@@ -25,7 +25,7 @@ const Navbar = () => {
                         </div>
                         <ul className="drop-content">
                             {el.children.map(el =>
-                                <Link key="el" href="/Profile">
+                                <Link key={el} href="/Profile">
                                     <li>{el}</li>
                                 </Link>)}
                         </ul>

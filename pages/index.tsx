@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import BackgroundCilp from '../component/BackgroundCilp'
 import ProfileCard from '../component/ProfileCard'
 import ScrollParallax from '../component/ScrollParallax'
@@ -41,27 +40,4 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
-const LinkTest = () => {
-  return (
-    <ul>
-      {new Array(5).fill("Link").map((el, idx) =>
-        <Link
-          passHref
-          href={{
-            pathname: "/Profile",
-            query: {
-              id: idx + 1,
-            }
-          }}
-        >
-          <li>
-            <a>Profile-{el}-{idx + 1}</a>
-          </li>
-        </Link>
-      )}
-    </ul>
-  )
-}
-
 export default Home
